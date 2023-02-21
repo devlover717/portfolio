@@ -1,0 +1,171 @@
+  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+
+#profile-pic {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 4px;
+    border: 4px rgb(32, 149, 208) solid;
+    margin: 20px;
+}
+
+
+#job {
+    margin: 20px;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+
+
+#li , #gh {
+    width: 1rem;
+    height: auto;
+    margin: 0.2rem;
+}
+
+
+.contact {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cv {
+    padding: 1rem;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+#cv:hover {
+    background-color: rgb(21, 108, 195);
+}
+
+
+#gmail {
+    width: 3.5rem;
+    height: 3rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 20px;
+}
+
+#gmail-link {
+    margin: 1.5rem;
+}
+
+#gmail:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+
+.psbuttons {
+    border: 1px black solid; 
+    width: 11rem;
+    margin: 1rem auto ;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: none;
+}
+
+
+.psbtn {
+    padding: 0.8rem;
+    border-radius: 15px;
+    margin: 5px;
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+#skls {
+    padding: 0.8rem 1.2rem;
+    background-color: lightgray;
+}
+
+#skls:hover {
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    margin: 5px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.img {
+    margin: 1rem;
+    border-radius: 15px;
+    width: 16rem; 
+    height: 8rem;
+}
+
+.img:hover {
+    transform: translateX(2px);
+}
+
+.projects {
+    width: 40rem;
+    height: 30rem;
+}
+
+
+
+footer {
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+@media  screen and (max-width:700px) {
+
+    .img {
+        margin: 1rem;
+        border-radius: 15px;
+        width: 16rem; 
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-self: center;
+        align-self: center;
+        margin: 1rem auto;
+
+    }
+
+    footer {
+        display: none;
+    }
+
+    
+}

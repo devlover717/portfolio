@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    max-height: 100vh;
+    background-color: #add8e6;
+}
+
+#back {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+nav ul{
+    list-style-type: none;
+    display: inline;
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    margin: 0;
+    background-color: lightgreen;
+    border-radius: 2rem;
+    padding-right: 2rem;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+nav ul li a:hover , nav ul li a:active {
+    text-decoration: underline;
+}
+
+nav {
+    text-align: center;
+}
+
+nav h4 {
+
+    font-size: 30px;
+    margin: auto;
+    top: 1rem;
+    background-color: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13rem;
+    width: auto;
+    text-align: center;
+}
+
+
+main div h2 {
+    background-color: black;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    letter-spacing: 2px;
+}
+
+
+main div button, main div button:active {
+    padding: 1rem; 
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    border: 4px black solid; 
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+}
+
+main div button:hover {
+    color: whitesmoke; 
+    background-color: black;
+    border-color: whitesmoke;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    nav ul {
+        position: absolute;
+        top: 5rem;
+        margin-inline: auto;
+    }
+
+    nav {
+        text-align: center;
+    }
+}

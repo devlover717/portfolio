@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    max-height: 100vh;
+    font-family: 'Lora', serif;
+    margin: 0;
+}
+
+
+#back {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+@media  screen and (max-width: 600px) {
+    #button {
+        margin: 3rem;
+    }
+}
+
+.container {
+    width: 60%; 
+    margin: 9rem 6.2rem;
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
+
+
+button {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    border-radius: 1rem;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    padding: 1rem 2rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    button {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+    }
+
+    .container {
+        margin-top: 8rem;
+        margin-left: 2rem;
+    }
+}
