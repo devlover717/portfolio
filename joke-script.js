@@ -1,60 +1,24 @@
-let myJokes = [
-    {
-       
-        "setup": "I was walking down the street and saw some black guy on a bike and it looked just like mine so I ran home to check.",
-        "delivery": "Thankfully he was still chained up in my basement.",
-       
-    },
-    {
-        
-        "setup": "Has COVID-19 forced you to wear glasses and a mask at the same time?",
-        "delivery": "If so, you may be entitled to condensation.",
-       
-    },
-    {
-        
-        "setup": "What do you get a hunter for his birthday?",
-        "delivery": "A birthday pheasant",
-       
-    },
-    {
-       
-        "setup": "My neighbor is a 90 year old with Alzheimer's, I see him every morning and he asks me If I've seen his wife. Every day I have to tell this poor man that his wife died 20 years ago. I could have moved to another house or even ignore his question.",
-        "delivery": "But the look of joy in his eyes whenever I answer him is worth the world.",
-        
-    },
-    {
-       
-        "setup": "What's the difference between a feminist and a grenade?",
-        "delivery": "The grenade actually accomplishes something when it triggers.",
-        
-    },
-    {
-        "setup": "How do construction workers party?",
-        "delivery": "They raise the roof.",
-       
-    },
-]
+const jokeEl = document.querySelector('#joke'); 
+const btnEl = document.querySelector('#btn'); 
 
 
-const initApp = () => {
+btnEl.addEventListener('click', async (event) => {
 
-let index = Math.floor(Math.random() * 8 ); 
+    jokeEl.textContent = 'updating...'; 
 
-const jokeSetupDisplay = document.querySelector('#joke-s'); 
-const jokeDeliveryDisplay = document.querySelector('#joke-d'); 
+    btnEl.disabled = true;
+    btnEl.textContent = 'Loading...';
 
+    const response = await fetch('https://api.api-ninjas.com/v1/jokes?limit=1', {
+        method: 'GET', 
+        headers: {'X-Api-Key': 'AIej0Id4XRo6n9GkEV7b/w==NaZk4CRFqhAurdbb'}, 
+        contentType: 'application/json'
+    });
 
-jokeSetup = JSON.stringify(myJokes[index]['setup']); 
-jokeDelivery = JSON.stringify(myJokes[index]['delivery']); 
+    const jsonResponse = await response.json(); 
 
-jokeSetupDisplay.innerHTML = jokeSetup; 
-jokeDeliveryDisplay.innerHTML = jokeDelivery;
-};
+    btnEl.disabled = false; 
+    btnEl.textContent = 'Tell me a joke'; 
 
-
-const button = document.querySelector('button'); 
-
-button.addEventListener('click', (event) => {
-    initApp();
+    jokeEl.textContent = jsonResponse[0]['joke'];
 })
