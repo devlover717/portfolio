@@ -29,7 +29,7 @@ body{
 }
 
 .box {
-    min-width: 400px;
+    min-width: 300px;
     padding: 10px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
     background: #2980b9;
